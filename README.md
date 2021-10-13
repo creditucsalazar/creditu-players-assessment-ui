@@ -31,3 +31,15 @@ npm run test:e2e
 ```
 npm run lint
 ```
+
+## Levantar contenerdor docker con el servidor que expone la interfaz de usuario
+Es necesario tener la API expuesta en el puerto 3000
+```bash
+docker run -it -p 8080:80 creditucsalazar/creditu-players-assessment-ui
+```
+
+## Levantar solución completa usando docker compose
+Es necesario editar el archivo docker-compose.yml en la línea 16 con las credenciales de la base de datos
+```bash
+docker-compose up
+```

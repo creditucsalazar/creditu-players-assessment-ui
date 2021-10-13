@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  creditu-players-assessment-ui:
+    container_name: creditu-players-assessment-ui
+    image: 'creditucsalazar/creditu-players-assessment-ui'
+    ports:
+      - 8080:80
+    depends_on:
+      - creditu-players-assessment-api
+  creditu-players-assessment-api:
+    container_name: creditu-players-assessment-api
+    image: 'creditucsalazar/creditu-players-assessment-api'
+    ports:
+      - 3000:3000
+    environment:
+      - MONGODB_URI=srv+mongodb://usuario:clave@cluster/basededatos
